@@ -1,0 +1,117 @@
+\documentclass[a4paper,11pt,fleqn]{article}
+
+\usepackage{cmap}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{polyglossia}
+\usepackage[tracking=true]{microtype}
+
+\usepackage{titlesec}
+
+\usepackage{csquotes}
+\usepackage{biblatex}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\usepackage{booktabs}
+\usepackage{tabularray}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[skip=0.8\baselineskip]{parskip}
+\usepackage{geometry}
+\usepackage{mdframed}
+
+\usepackage[hidelinks]{hyperref}
+
+%-------   Fontspec   ---------------------------------------------------------------------------------
+
+\setmainfont{EB Garamond}
+\setsansfont{Libertinus Sans}
+\setmonofont{JetBrainsMono NL}
+\setmathfont{Garamond Math}
+
+%-------   Polyglossia   ---------------------------------------------------------------------------------
+
+\setmainlanguage{ukrainian}
+\setotherlanguages{english,russian}
+
+%-------   Microtype   ---------------------------------------------------------------------------------
+
+\microtypesetup{letterspace=40,stretch=30}
+
+%-------   Titlesec   ---------------------------------------------------------------------------------
+
+\titleformat{\section}[block]{\raggedright\large\addfontfeatures{Numbers={Uppercase,Monospaced}}\selectfont\bfseries}{\thesection.\!}{1em}{}
+\titleformat{\subsection}[block]{\raggedright\addfontfeatures{Numbers={Uppercase,Monospaced}}\selectfont\bfseries}{}{0em}{}
+
+\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.8\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.8\baselineskip}{0pt}
+
+%-------   BibLaTeX   ---------------------------------------------------------------------------------
+
+\addbibresource{main.bib}
+
+%-------   GraphicX   ---------------------------------------------------------------------------------
+
+\graphicspath{ {./Images/} }
+
+%-------   XColor   ---------------------------------------------------------------------------------
+
+\definecolor{quotelinegray}{HTML}{504945}
+
+%-------   Caption & Subcaption   ---------------------------------------------------------------------------------
+
+\captionsetup{
+  format=hang,
+  labelsep=period,
+  justification=raggedright,
+  labelfont={bf,sf,small},
+  font={sf,small,stretch={1.1}}
+}
+
+%\subcaptionsetup{
+%  format=hang,
+%  labelsep=space,
+%  labelformat=brace,
+%  justification=raggedright,
+%  labelfont={sf,footnotesize},
+%  font={sf,footnotesize,stretch={1.1}}
+%}
+
+%\captionsetup[figure]{name=Мал.}
+%\captionsetup[table]{name=Таблиця}
+%\captionsetup[equation]{name=Рівняння}
+
+%-------   Geometry   ---------------------------------------------------------------------------------
+
+\geometry{a4paper,left=1.8in,right=1.8in,top=1.25in,bottom=1.4in}
+
+%-------   MdFramed   ---------------------------------------------------------------------------------
+
+\newmdenv[                                
+    leftmargin=0.2in,
+    rightmargin=0in,         
+    skipabove=12pt,          
+    skipbelow=1pt,
+    linecolor=quotelinegray,
+    topline=false,   
+    bottomline=false,
+    rightline=false, 
+    leftline=true,   
+    linewidth=1.2pt,
+    innerrightmargin=0pt, 
+    font=\fontsize{10}{11}\selectfont
+]{quoting}
+
+%-------   Other Settings   ---------------------------------------------------------------------------------
+
+\linespread{1.2}
+\renewcommand{\UrlFont}{}
+\newcommand{\lnumb}[1]{{\addfontfeatures{Numbers={Lowercase,Proportional}}#1}}
+\newcommand{\smcp}[1]{\textsc{\fontsize{11.5pt}{13.2pt}\selectfont #1}}
+\def\UrlBreaks{\do\/\do\-\do\_\do\%}
+
