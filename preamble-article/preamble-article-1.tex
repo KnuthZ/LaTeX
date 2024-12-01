@@ -1,0 +1,160 @@
+\documentclass[a4paper,11pt,fleqn]{article}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{siunitx}
+\usepackage{polyglossia}
+\usepackage{microtype}
+
+\usepackage{titlesec}
+\usepackage{titleps}
+
+\usepackage{csquotes}
+\usepackage{biblatex}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\usepackage{booktabs}
+\usepackage{tabularray}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{setspace}
+\usepackage{ragged2e}
+
+\usepackage{geometry}
+\usepackage{mdframed}
+\usepackage{enumitem}
+
+\usepackage[hidelinks]{hyperref}
+
+%-------   Fontspec   ---------------------------------------------------------------------------------
+
+\setmainfont{EB Garamond}[
+  Numbers={Lowercase,Proportional},
+  SmallCapsFeatures={LetterSpace=6}
+]
+\setsansfont{Alegreya Sans}[
+  Numbers={Uppercase,Monospaced},
+  SmallCapsFeatures={LetterSpace=6}
+]
+\setmathfont{Garamond Math}
+
+%-------   Polyglossia   ---------------------------------------------------------------------------------
+
+\setmainlanguage{ukrainian}
+\setotherlanguages{english,russian}
+
+%-------   Titlesec   ---------------------------------------------------------------------------------
+
+\titleformat{\section}[block]{\raggedright\fontsize{13pt}{14.3pt}\selectfont\addfontfeatures{Numbers={Uppercase,Monospaced}}\bfseries}{}{0em}{}
+\titleformat{\subsection}[block]{\raggedright\addfontfeatures{Numbers={Uppercase,Monospaced}}\bfseries}{}{0em}{}
+
+\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.8\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.8\baselineskip}{0pt}
+
+%-------   Titleps   ---------------------------------------------------------------------------------
+
+\newpagestyle{article}{
+    \sethead{}{}{}
+    \setfoot{}{\addfontfeatures{Numbers={Uppercase,Monospaced}}\thepage}{}                    
+}
+
+\pagestyle{article}
+
+%-------   BibLaTeX   ---------------------------------------------------------------------------------
+
+\addbibresource{main.bib}
+
+%-------   GraphicX   ---------------------------------------------------------------------------------
+
+\graphicspath{ {./Images/} }
+
+%-------   XColor   ---------------------------------------------------------------------------------
+
+\definecolor{quotelinegray}{HTML}{aaa9a9}
+
+%-------   Caption & Subcaption   ---------------------------------------------------------------------------------
+
+\captionsetup{
+  format=hang,
+  labelsep=period,
+  justification=raggedright,
+  labelfont={bf,sf,small},
+  font={sf,small,stretch={1.1}}
+}
+
+%\subcaptionsetup{
+%  format=hang,
+%  labelsep=space,
+%  labelformat=brace,
+%  justification=raggedright,
+%  labelfont={sf,footnotesize},
+%  font={sf,footnotesize,stretch={1.1}}
+%}
+
+%\captionsetup[figure]{name=Мал.}
+%\captionsetup[table]{name=Таблиця}
+%\captionsetup[equation]{name=Рівняння}
+
+%-------   Geometry   ---------------------------------------------------------------------------------
+
+\geometry{a4paper,left=2in,right=2in,top=1.5in,bottom=1.5in}
+
+%-------   Setspace   ---------------------------------------------------------------------------------
+
+\setstretch{1.15}
+
+%-------   Ragged2E   ---------------------------------------------------------------------------------
+
+\RaggedRight
+
+%-------   MdFramed   ---------------------------------------------------------------------------------
+
+\newmdenv[                                
+    leftmargin=0.2in,
+    rightmargin=0in,         
+    skipabove=0.8\baselineskip,          
+    skipbelow=-0.1\baselineskip,
+    linecolor=quotelinegray,
+    topline=false,   
+    bottomline=false,
+    rightline=false, 
+    leftline=true,   
+    linewidth=1pt,
+    innerrightmargin=0pt, 
+    font=\small
+]{quoting}
+
+%-------   Enumitem   ---------------------------------------------------------------------------------
+
+\setlist[enumerate,1]{%
+  labelsep=1em,   
+  leftmargin=1.8em,
+  font=\addfontfeatures{Numbers=Monospaced}
+}
+
+\setlist[enumerate,2]{%
+  labelsep=0.8em,  
+  leftmargin=2.6em 
+}
+
+\setlist[itemize,1]{%
+  labelsep=1em,   
+  leftmargin=1.5em
+}
+
+\setlist{parsep=0.4\baselineskip}
+
+%-------   Other Settings   ---------------------------------------------------------------------------------
+
+\setlength{\parindent}{22pt}
+
+\newcommand{\upnumb}[1]{{\addfontfeatures{Numbers={Uppercase,Monospaced}}#1}}
+\newcommand{\smcp}[1]{{\fontsize{11.5pt}{.}\selectfont\textsc{#1}}}
+
+\renewcommand{\UrlFont}{}
+\def\UrlBreaks{\do\/\do\-\do\_\do\%}
+
