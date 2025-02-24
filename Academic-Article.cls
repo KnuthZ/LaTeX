@@ -24,7 +24,6 @@
 \makeatother
 
 \RequirePackage[
-  a4paper,
 	top=2.5cm, % Top margin
 	bottom=2.5cm, % Bottom margin
 	left=2cm, % Left margin
