@@ -38,7 +38,7 @@
 \RequirePackage{polyglossia}
 \RequirePackage{siunitx}
 \RequirePackage[version=4]{mhchem}
-\RequirePackage{lettrine}
+\RequirePackage[lines=3,lhang=0.25,nindent=0em]{lettrine}
 
 \setmainfont[
   Ligatures=TeX,
