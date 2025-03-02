@@ -172,9 +172,9 @@
   skip=6pt
 }
 
-%\captionsetup[figure]{name=Мал.}
-%\captionsetup[table]{name=Таблиця}
-%\captionsetup[equation]{name=Рівняння}
+\captionsetup*[figure]{name=Мал.}
+\captionsetup*[table]{name=Таблиця}
+\captionsetup*[equation]{name=Рівняння}
 
 %------
 
