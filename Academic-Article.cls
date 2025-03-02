@@ -69,6 +69,7 @@
 
 \RequirePackage{booktabs}
 \RequirePackage{tabularray}
+\RequirePackage{stfloats}
 \UseTblrLibrary{amsmath,siunitx,booktabs}
 
 \AtBeginEnvironment{tabular}{\addfontfeatures{Numbers={Uppercase,Monospaced}}}
