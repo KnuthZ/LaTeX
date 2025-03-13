@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{EM-Article}[2025/03/24 EM-Type document class]
+\ProvidesClass{EM-Article-1}[2025/03/24 EM-Type document class]
 
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
