@@ -291,4 +291,4 @@
 
 %------
 
-\RequirePackage[lines=3,lhang=0.1]{lettrine}
+\RequirePackage{lettrine}
