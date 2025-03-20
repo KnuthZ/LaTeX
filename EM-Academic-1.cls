@@ -67,7 +67,7 @@
 \AtBeginEnvironment{tabular}{\addfontfeatures{Numbers={Uppercase,Monospaced}}}
 \AtBeginEnvironment{tblr}{\addfontfeatures{Numbers={Uppercase,Monospaced}}}
 \AtBeginEnvironment{longtblr}{\addfontfeatures{Numbers={Uppercase,Monospaced}}}
-\apptocmd{\tableofcontents}{\vspace{\baselineskip}}{}{}
+\apptocmd{\tableofcontents}{\vspace{2\baselineskip}}{}{}
 \pretocmd{\ce}{\addfontfeatures{Numbers={Uppercase,Monospaced}}}{}{}
 \renewcommand{\theequation}{{\addfontfeatures{Numbers={Uppercase,Monospaced}}\arabic{equation}}}
 
